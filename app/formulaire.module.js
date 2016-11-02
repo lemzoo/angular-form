@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var platform_browser_1 = require('@anglar/platform-browser');
+var forms_1 = require('@angular/forms');
+var formulaire_component_1 = require('./formulaire.component');
+var FormModule = (function () {
+    function FormModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-<<<<<<< HEAD
-            template: '<h1>My First Angular App</h1>'
-=======
-            template: '<hero-form></hero-form>'
->>>>>>> b7d9a63551e0ca10858d3b367dd79e2aef07bf28
+    FormModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule],
+            declarations: [formulaire_component_1.FormComponent],
+            bootstrap: [formulaire_component_1.FormComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], FormModule);
+    return FormModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.FormModule = FormModule;
+//# sourceMappingURL=formulaire.module.js.map
